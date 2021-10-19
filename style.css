@@ -10,4 +10,319 @@ html {
   font-size: 62.5%;
   font-family: "Kumbh Sans", sans-serif;
 }
+
+body {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(#af67e9));
+  background-image: linear-gradient(to top, #6565e7, #af67e9);
+  background-repeat: no-repeat;
+}
+
+.container {
+  height: auto;
+  width: 100%;
+  margin: 15rem 0 10rem 0;
+}
+
+.content {
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 2rem;
+  position: relative;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+}
+
+.content__illustration__1, .content__illustration__2 {
+  display: none;
+}
+
+.content__illustration::before {
+  content: "S";
+  width: 9rem;
+  background: aqua;
+  position: absolute;
+  background-color: #e7e7e9;
+  height: 6rem;
+  -webkit-transform: skew(-66deg, 45deg) rotate(-11deg);
+          transform: skew(-66deg, 45deg) rotate(-11deg);
+  top: 0rem;
+  left: 12rem;
+  border-radius: 0.5rem;
+}
+
+.content__illustration__illustration {
+  position: absolute;
+  top: -11rem;
+  left: 1.8rem;
+}
+
+.content__faq {
+  padding-top: 13rem;
+  width: 87%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.content__faq__heading {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.content__faq__questions {
+  color: #787887;
+  margin: 3rem 0 3rem 0;
+}
+
+.content__faq__questions__hr {
+  opacity: 0.1;
+}
+
+.content__faq__questions__list {
+  list-style: none;
+  font-size: 1.2rem;
+  margin: 2rem 0 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content__faq__questions__list h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  display: inline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.content__faq__questions__list h3:hover {
+  color: #f47c57;
+}
+
+.content__faq__questions__list span {
+  display: block;
+  font-size: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.content__faq__questions__list input {
+  display: none;
+}
+
+.content__faq__questions__list label {
+  margin-top: -2rem;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.content__faq__questions__list label > img {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.content__faq__questions__list input:checked ~ span {
+  font-size: 1.2rem;
+  margin: 1.5rem 2rem 0rem 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.content__faq__questions__list input:checked ~ label > img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.content__faq__questions__list input:checked ~ h3 {
+  color: #4a4b5e;
+  font-weight: 700;
+  font-size: 1.35rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.checkbox:checked *.container {
+  width: 100%;
+}
+
+@media screen and (max-width: 332px) {
+  .content__illustration::before {
+    left: 8rem;
+  }
+  .content__illustration__illustration {
+    left: -2.2rem;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 500px) {
+  .content__illustration::before {
+    left: 16rem;
+  }
+  .content__illustration__illustration {
+    left: 5.2rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  html {
+    font-size: 65%;
+  }
+  .content__illustration::before {
+    left: 23rem;
+  }
+  .content__illustration__illustration {
+    left: 12.8rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 760px) {
+  html {
+    font-size: 70%;
+  }
+  .content__illustration::before {
+    left: 23rem;
+  }
+  .content__illustration__illustration {
+    left: 12.8rem;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .container {
+    height: 100vh;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 64%;
+    height: 63%;
+  }
+  .content__illustration {
+    overflow: hidden;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -57rem -29.5rem;
+    -webkit-box-flex: 45%;
+        -ms-flex: 45%;
+            flex: 45%;
+  }
+  .content__illustration__1, .content__illustration__2 {
+    display: block;
+  }
+  .content__illustration__1 {
+    position: absolute;
+    left: -9.3rem;
+    top: 39%;
+  }
+  .content__illustration__2 {
+    margin-left: -8rem;
+    margin-right: 8rem;
+    margin-top: 7rem;
+  }
+  .content__illustration::before {
+    display: none;
+  }
+  .content__illustration__illustration {
+    display: none;
+  }
+  .content__faq {
+    -webkit-box-flex: 38%;
+        -ms-flex: 38%;
+            flex: 38%;
+    padding-top: 7rem;
+  }
+  .content__faq__heading {
+    text-align: start;
+    font-size: 3.5rem;
+  }
+  .content__faq__questions {
+    margin-right: 10rem;
+  }
+  .content__faq__questions__list h3 {
+    font-size: 1.5rem;
+  }
+  .content__faq__questions__list input:checked ~ h3 {
+    font-size: 1.45rem;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  html {
+    font-size: 58%;
+  }
+  .content {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1100px) {
+  html {
+    font-size: 55%;
+  }
+  .content {
+    width: 85%;
+  }
+  .content__faq {
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (min-width: 756px) and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+  .content {
+    width: 95%;
+  }
+  .content__faq {
+    -webkit-box-flex: 30%;
+        -ms-flex: 30%;
+            flex: 30%;
+    margin-top: 10rem;
+  }
+  .content__faq__questions {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 756px) {
+  html {
+    font-size: 45%;
+  }
+  .content {
+    width: 95%;
+  }
+  .content__faq {
+    -webkit-box-flex: 20%;
+        -ms-flex: 20%;
+            flex: 20%;
+    margin-top: 10rem;
+  }
+  .content__faq__questions {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
